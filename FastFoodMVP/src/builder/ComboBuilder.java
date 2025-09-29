@@ -11,11 +11,11 @@ public class ComboBuilder {
     public ComboBuilder(Combo combo){
         this.combo = combo;
 }
-    public ComboBuilder withDrink(String drink){
-        if (drink ! = null && !drink.trim().isEmpty()) {
+    public ComboBuilder withDrink(String drink) {
+        if (drink != null && !drink.trim().isEmpty()) {
             combo.setDrink(drink);
             combo.addPrice(getDrinkPrice(drink));
-    }
+        }
         return this;
     }
     public ComboBuilder withSide(String side){
@@ -23,14 +23,14 @@ public class ComboBuilder {
             combo.setSide(side);
             combo.addPrice(getSidePrice(side));
     }
-        retrun this;
+        return this;
     }
     public ComboBuilder withExtra(String extra) {
         if (extra != null && !extra.trim().isEmpty()) {
             combo.setExtra(extra);
             combo.addPrice(getExtraPrice(extra));
     }
-        retrun this;
+        return this;
     }
     public Combo build(){
         return combo;

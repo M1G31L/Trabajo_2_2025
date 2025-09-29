@@ -1,8 +1,7 @@
 package model;
 
-public class ComboType {
+public enum ComboType {
     HAMBURGUESA,
     POLLO,
-    VEGETARIANO,
-    CHEESEBURGER,
+    VEGETARIANO
 }
