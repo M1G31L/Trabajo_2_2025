@@ -8,7 +8,7 @@ import model.ComboType;
  */
 public class ComboFactory {
     public static Combo createCombo(ComboType type){
-        switch (type){
+        switch (type) {
             case HAMBURGUESA:
                 Combo c1 = new Combo("Hamburguesa", 22.90);
                 c1.setMain("Hamburguesa clasica");
@@ -17,9 +17,9 @@ public class ComboFactory {
                 Combo c2 = new Combo("pollo", 21.90);
                 c2.setMain("Combo de pollo");
                 return c2;
-            case VEGETARIA:
-                Combo c3 = new Combo("vegetariano",27.90);
-                c3.setMain("combo Vegetariano");
+            case VEGETARIANO:
+                Combo c3 = new Combo("Vegetariano", 27.00);
+                c3.setMain("Combo vegetariano");
                 return c3;
             case CHEESEBURGER:
                 Combo c4 = new Combo("Hamburguesa de queso", 28.90);

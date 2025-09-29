@@ -1,16 +1,14 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package builder;
+
 import model.Combo;
 
 public class ComboBuilder {
-    private Combo combo;
-    
-    public ComboBuilder(Combo combo){
+    private final Combo combo;
+
+    public ComboBuilder(Combo combo) {
         this.combo = combo;
-}
+    }
+
     public ComboBuilder withDrink(String drink) {
         if (drink != null && !drink.trim().isEmpty()) {
             combo.setDrink(drink);
@@ -18,24 +16,27 @@ public class ComboBuilder {
         }
         return this;
     }
-    public ComboBuilder withSide(String side){
-        if(side !=null &&!side.trim().isEmpty()){
+
+    public ComboBuilder withSide(String side) {
+        if (side != null && !side.trim().isEmpty()) {
             combo.setSide(side);
             combo.addPrice(getSidePrice(side));
-    }
+        }
         return this;
     }
+
     public ComboBuilder withExtra(String extra) {
         if (extra != null && !extra.trim().isEmpty()) {
             combo.setExtra(extra);
             combo.addPrice(getExtraPrice(extra));
-    }
+        }
         return this;
     }
-    public Combo build(){
+
+    public Combo build() {
         return combo;
     }
-    
+
     private double getDrinkPrice(String drink){
         String d = drink .toLowerCase();
         if (d.contains("agua")) return 3.0;
@@ -59,4 +60,3 @@ public class ComboBuilder {
         return 2.5;
     }
 }
-

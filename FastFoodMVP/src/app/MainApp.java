@@ -4,15 +4,14 @@
  */
 package app;
 
+import controller.OrderController;
+
 /**
  *
  * @author ASUS
  */
 public class MainApp {
-
     public static void main(String[] args) {
         new OrderController().start();
-       
     }
-    
 }
