@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package view;
 import model.ComboType;
 import java.util.Scanner;
@@ -26,13 +23,16 @@ public class ConsoleView {
         System.out.println(" 2. Hamburguesa pollo ");        
         System.out.println(" 3.Hamburguesa Vegetaria");
         System.out.println(" 4. Hamburguesa Queso y Carne");
+        System.out.println(" 5. Hamburguesa de VEGETALE Y CARNE");
         System.out.println("__Opcion (1-4): ");
         int opt = safeReadInt(1,4);
         return switch (opt) {
             case 1 -> ComboType.HAMBURGUESA;
             case 2 -> ComboType.POLLO;
             case 3 -> ComboType.VEGETARIANO;
-            default -> ComboType.CHEESEBURGER;
+            case 4 -> ComboType.CHEESEBURGER;   
+            default -> ComboType.VEGETARIANOANDCARNE;
+                
         };
     }
 

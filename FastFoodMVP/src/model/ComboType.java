@@ -4,5 +4,7 @@ public enum ComboType {
     HAMBURGUESA,
     POLLO,
     VEGETARIANO,
-    CHEESEBURGER
+    CHEESEBURGER,
+    VEGETARIANOANDCARNE
+  
 }

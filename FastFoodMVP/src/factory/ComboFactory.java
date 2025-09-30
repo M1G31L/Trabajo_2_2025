@@ -26,6 +26,10 @@ public class ComboFactory {
                 c4.setMain ("Combo Queso ");
                 return c4;
                 default:
+             case  VEGETARIANOANDCARNE:
+                Combo c5;
+            c5 = new Combo("Hamburguesa de VEGETALE Y CARNE", 30.90);
+                c5.setMain ("Combo  VEGETALE Y CARNE ");
                 throw new IllegalArgumentException("Tipo de combo desconocido");
         }
     }
